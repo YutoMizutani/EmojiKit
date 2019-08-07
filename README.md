@@ -1,3 +1,3 @@
 # EmojiKit
 
-A description of this package.
+📚 Ultimate Emoji Generator library for Swift

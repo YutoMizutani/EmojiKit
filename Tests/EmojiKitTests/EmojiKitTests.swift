@@ -2,14 +2,24 @@ import XCTest
 @testable import EmojiKit
 
 final class EmojiKitTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(EmojiKit().text, "Hello, World!")
+    func testTranslateColor() {
+        XCTAssertEqual(EmojiKit().translateColor(0xFF000000), "#000000FF")
+    }
+
+    func testE2E() {
+        let emojiKit = EmojiKit()
+        let imagePath = "./emoji.png"
+        XCTAssertNoThrow(
+            emojiKit.generate("絵文\n字。", imagePath: imagePath, fontPath: "foo.otf")
+        )
+        XCTAssertNoThrow(
+            emojiKit.remove(imagePath)
+        )
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testTranslateColor", testTranslateColor),
+        ("testE2E", testE2E)
     ]
 }
+

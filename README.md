@@ -6,6 +6,8 @@
 
 📚 Ultimate Emoji Generator library for Swift
 
+<img src="Example/out/emoji.png" width="128" height="128" alt="EmojiKit"><br>
+
 ## Requirements
 
 EmojiKit requires Swift 5 or higher.

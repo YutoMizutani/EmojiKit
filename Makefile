@@ -14,7 +14,11 @@ all-example:
 install:
 	make install-emojilib
 install-emojilib:
-	pip3 install emojilib --extra-index-url https://repo.fury.io/emoji-gen/
+	git submodule update --init --recursive \
+	&& cd externals/libemoji \
+	&& cmake . \
+	&& make
+	cp modulemap_template externals/libemoji/include/module.modulemap
 
 build:
 	swift build

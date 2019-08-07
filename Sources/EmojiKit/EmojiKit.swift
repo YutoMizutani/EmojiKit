@@ -49,7 +49,7 @@ public struct EmojiKit {
                          backgroundColor: UInt32 = 0x00FFFFFF,
                          textAlignment: TextAlignment = .center,
                          isSizeFixed: Bool = false,
-                         isEnabledStretch: Bool = false,
+                         isEnabledStretch: Bool = true,
                          fontPath: String,
                          format: ImageFormat = .png,
                          quality: Int = 100) {

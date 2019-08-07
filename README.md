@@ -6,6 +6,8 @@
 
 📚 Ultimate Emoji Generator library for Swift
 
+<img src="Example/out/emoji.png" width="128" height="128" alt="EmojiKit"><br>
+
 ## Swift Package Manager
 
 Add the following dependency to your Package.swift manifest:

@@ -35,7 +35,7 @@ public struct EmojiKit {
     ///   - imagePath: Output image path
     ///   - textColor: Text color as 0xAARRGGBB
     ///   - backgroundColor: Background color as 0xAARRGGBB
-    ///   - align: Text align
+    ///   - textAlignment: Text alignment
     ///   - isSizeFixed: Text size fixed
     ///   - isEnabledStretch: Text stretch
     ///   - fontPath: Font file path

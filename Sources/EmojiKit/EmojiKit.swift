@@ -36,23 +36,13 @@ public enum TextAlignment: String {
 
 /// EmojiKit Image format parameters
 public enum ImageFormat: String {
-    case bmp, gif, ico, jpg, png, wbmp, webp
+    case png, webp
 
     /// Translate to `SkImageDecoder` parameter
     var skImageDecoderParameter: String {
         switch self {
-        case .bmp:
-            return "kBMP_Format"
-        case .gif:
-            return "kGIF_Format"
-        case .ico:
-            return "kICO_Format"
-        case .jpg:
-            return "kJPEG_Format"
         case .png:
             return "kPNG_Format"
-        case .wbmp:
-            return "kWBMP_Format"
         case .webp:
             return "kWEBP_Format"
         }

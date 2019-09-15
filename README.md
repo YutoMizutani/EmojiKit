@@ -8,10 +8,6 @@
 
 <img src="Example/out/emoji.png" width="128" height="128" alt="EmojiKit"><br>
 
-## Requirements
-
-EmojiKit requires Swift 5 or higher.
-
 ## Swift Package Manager
 
 Add the following dependency to your Package.swift manifest:
@@ -57,8 +53,7 @@ $ make build
 | format | Image format |
 | quality | Image quality |
 
-
-More details and parameters are to see [emoji-gen/emojilib](https://github.com/emoji-gen/emojilib) and [emoji-gen/libemoji](https://github.com/emoji-gen/libemoji)
+More details and parameters are to see [emoji-gen/libemoji](https://github.com/emoji-gen/libemoji)
 
 ## License
 

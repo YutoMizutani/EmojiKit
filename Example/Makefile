@@ -5,7 +5,7 @@ all:
 	make test
 
 build:
-	swift build
+	swift build -v
 generate:
 	swift package generate-xcodeproj
 
@@ -13,7 +13,7 @@ run:
 	swift run
 
 test:
-	swift test
+	swift test -v
 
 clean:
 	swift package clean

@@ -2,7 +2,6 @@ PROJECT_NAME = EmojiKit
 
 all:
 	make clean
-	make install
 	make build
 	make generate
 	make test
@@ -10,14 +9,23 @@ all:
 all-example:
 	cd "$(PWD)/Example" \
 	&& make all
-
-install:
-	make install-emojilib
-install-emojilib:
-	pip3 install emojilib --extra-index-url https://repo.fury.io/emoji-gen/
+run:
+	make all
+	cd "$(PWD)/Example" \
+		&& make run
 
 build:
-	swift build
+	make build-libemoji
+	make build-emojikit
+build-libemoji:
+	# https://github.com/emoji-gen/libemoji#how-to-build
+	git submodule update --init --recursive \
+		&& cd externals/libemoji \
+		&& cmake . \
+		&& make
+build-emojikit:
+	swift build -v
+
 generate:
 	swift package generate-xcodeproj
 
@@ -25,7 +33,7 @@ open:
 	open ${PROJECT_NAME}.xcodeproj
 
 test:
-	swift test
+	swift test -v
 
 clean:
 	swift package clean

@@ -1,5 +1,5 @@
 import Foundation
-import EmojiLib
+import CLibemoji
 
 extension String {
     /// Translate to C String parameter
@@ -22,14 +22,14 @@ public enum TextAlignment: String {
     case left, center, right
 
     /// Translate to `SkPaint` parameter
-    var skPaintParameter: String {
+    var skPaintParameter: EgAlign {
         switch self {
         case .left:
-            return "kLeft_Align"
+            return kLeft_Align
         case .center:
-            return "kCenter_Align"
+            return kCenter_Align
         case .right:
-            return "kRight_Align"
+            return kRight_Align
         }
     }
 }
@@ -39,12 +39,12 @@ public enum ImageFormat: String {
     case png, webp
 
     /// Translate to `SkImageDecoder` parameter
-    var skImageDecoderParameter: String {
+    var skImageDecoderParameter: EgFormat {
         switch self {
         case .png:
-            return "kPNG_Format"
+            return kPNG_Format
         case .webp:
-            return "kWEBP_Format"
+            return kWEBP_Format
         }
     }
 }
@@ -81,10 +81,12 @@ public struct EmojiKit {
                          format: ImageFormat = .png,
                          quality: Int = 100) -> URL? {
         var params: EgGenerateParams = EgGenerateParams()
-        params.fText = text.toCString()
+        print(MemoryLayout.size(ofValue: params))
+        memset(UnsafeMutablePointer(&params), 0, MemoryLayout.size(ofValue: params));
 
-        params.fWidth = width
-        params.fHeight = height
+        params.fText = text.toCString()
+        params.fWidth = UInt32(width)
+        params.fHeight = UInt32(height)
         params.fColor = textColor
         params.fBackgroundColor = backgroundColor
         params.fTextAlign = textAlignment.skPaintParameter
@@ -92,11 +94,11 @@ public struct EmojiKit {
         params.fDisableStretch = !isEnabledStretch
         params.fTypefaceFile = fontPath.toCString()
         params.fFormat = format.skImageDecoderParameter
-        params.fQuality = quality
+        params.fQuality = Int32(quality)
 
         var result = EgGenerateResult()
-        let error = emoji_generate(UnsafePointer<EgGenerateParams>(&params),
-                                   UnsafeMutablePointer<EgGenerateResult>(&result))
+        let error = emoji_generate(UnsafePointer(&params),
+                                   UnsafeMutablePointer(&result))
         if error != EG_OK {
             assertionFailure("ERROR: \(error)")
             return nil

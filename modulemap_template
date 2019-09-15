@@ -1,5 +1,0 @@
-module EmojiLib [system] {
-    umbrella header "include/emoji.h"
-    link "emoji"
-    export *
-}

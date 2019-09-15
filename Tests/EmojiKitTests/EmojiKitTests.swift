@@ -8,9 +8,6 @@ final class EmojiKitTests: XCTestCase {
         XCTAssertNoThrow(
             emojiKit.generate("絵文\n字。", imagePath: imagePath, fontPath: "foo.otf")
         )
-        XCTAssertNoThrow(
-            emojiKit.remove(imagePath)
-        )
     }
 
     static var allTests = [

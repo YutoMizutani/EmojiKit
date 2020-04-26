@@ -1,3 +1,4 @@
+.swiftpm/*
 out/*
 .DS_Store
 /.build

@@ -13,15 +13,35 @@
 Swift 5.1
 Python 3.7
 
+## Install
+
+### [Mint](https://github.com/yonaskolb/mint)
+```sh
+mint install YutoMizutani/EmojiKit@1.2.0
+```
+
+### Install
+```
+make install
+```
+
 ### Make
 ```sh
-$ git clone https://github.com/yonaskolb/EmojiKit.git
+$ git clone https://github.com/YutoMizutani/EmojiKit.git
 $ cd EmojiKit
-$ make install
-$ make build
+$ make
 ```
 
 ### Swift Package Manager
+
+**Use as CLI**
+
+```sh
+$ git clone https://github.com/YutoMizutani/EmojiKit.git
+$ cd EmojiKit
+$ make build
+$ .build/debug/emojigen <text> <output>
+```
 
 **Use as dependency**
 
@@ -32,6 +52,14 @@ Add the following dependency to your Package.swift manifest:
 ```
 
 And then import wherever needed: `import EmojiKit`
+
+## Usage
+
+```
+emojigen <text> <output>
+```
+
+![mint.png](static/mint.png)<br>
 
 ## Example
 

@@ -28,7 +28,7 @@ $ make build
 Add the following dependency to your Package.swift manifest:
 
 ```swift
-.package(url: "https://github.com/YutoMizutani/EmojiKit.git", .branch("master")),
+.package(url: "https://github.com/YutoMizutani/EmojiKit.git", .branch("swift-5.1")),
 ```
 
 And then import wherever needed: `import EmojiKit`

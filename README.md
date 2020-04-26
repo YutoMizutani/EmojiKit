@@ -48,7 +48,7 @@ $ .build/debug/emojigen <text> <output>
 Add the following dependency to your Package.swift manifest:
 
 ```swift
-.package(url: "https://github.com/YutoMizutani/EmojiKit.git", .upToNextMinor(from: "1.2.0"),
+.package(url: "https://github.com/YutoMizutani/EmojiKit.git", .branch("swift-5.1")),
 ```
 
 And then import wherever needed: `import EmojiKit`

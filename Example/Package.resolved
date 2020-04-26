@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/pvieito/CommandLineKit.git",
         "state": {
           "branch": "master",
-          "revision": "5ac5756f066b0a2baa8240c533c07d124b2e7e89",
+          "revision": "383b1c62107f50cb6e9bb1c6ff0ec6a2e22fac0f",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/pvieito/LoggerKit.git",
         "state": {
           "branch": "master",
-          "revision": "04b90d53e38f3f637ab54c980dd148569ffe723f",
+          "revision": "34762d10fc7a638142549e369a68e02d647e03e5",
           "version": null
         }
       },
@@ -23,9 +23,18 @@
         "package": "PythonTool",
         "repositoryURL": "https://github.com/pvieito/PythonKit.git",
         "state": {
-          "branch": "master",
-          "revision": "0b2ffa2db8d249112cc833a6e13faac004ce5835",
+          "branch": "swift-5.1",
+          "revision": "db33cefdaacd0f73fffb12ba00d9f8c3deca2043",
           "version": null
+        }
+      },
+      {
+        "package": "Rainbow",
+        "repositoryURL": "https://github.com/onevcat/Rainbow",
+        "state": {
+          "branch": null,
+          "revision": "9c52c1952e9b2305d4507cf473392ac2d7c9b155",
+          "version": "3.1.5"
         }
       }
     ]

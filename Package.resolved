@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/pvieito/CommandLineKit.git",
         "state": {
           "branch": "master",
-          "revision": "5ac5756f066b0a2baa8240c533c07d124b2e7e89",
+          "revision": "383b1c62107f50cb6e9bb1c6ff0ec6a2e22fac0f",
           "version": null
         }
       },
@@ -23,8 +23,8 @@
         "package": "PythonTool",
         "repositoryURL": "https://github.com/pvieito/PythonKit.git",
         "state": {
-          "branch": "master",
-          "revision": "0b2ffa2db8d249112cc833a6e13faac004ce5835",
+          "branch": "swift-5.1",
+          "revision": "db33cefdaacd0f73fffb12ba00d9f8c3deca2043",
           "version": null
         }
       }

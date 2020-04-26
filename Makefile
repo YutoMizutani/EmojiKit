@@ -1,31 +1,34 @@
-PROJECT_NAME = EmojiKit
+.DEFAULT_GOAL := all
 
-all:
-	make clean
-	make install
-	make build
-	make generate
-	make test
-	make all-example
+PROJECT_NAME=EmojiKit
+LIBRARY_NAME=EmojiKit
+
+.PHONY: all
+all: clean build generate test all-example
 all-example:
 	cd "$(PWD)/Example" \
 	&& make all
 
-install:
-	make install-emojilib
-install-emojilib:
-	pip3 install emojilib --extra-index-url https://repo.fury.io/emoji-gen/
+deps: deps-emojilib
+deps-emojilib:
+	pip install emojilib --extra-index-url https://repo.fury.io/emoji-gen/
 
-build:
+.PHONY: build
+build: deps
 	swift build
+
+.PHONY: generate
 generate:
 	swift package generate-xcodeproj
 
-open:
-	open ${PROJECT_NAME}.xcodeproj
+.PHONY: open
+open: generate
+	open $(PROJECT_NAME).xcodeproj
 
+.PHONY: test
 test:
-	swift test
+	swift test -c debug
 
+.PHONY: clean
 clean:
 	swift package clean

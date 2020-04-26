@@ -1,6 +1,6 @@
 # EmojiKit
 
-![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-5.1-orange.svg)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/YutoMizutani/OperantKit/blob/master/LICENSE)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
@@ -10,15 +10,28 @@
 
 ## Requirements
 
-EmojiKit requires Swift 5 or higher.
+Swift 5.1
+Python 3.7
 
-## Swift Package Manager
+### Make
+```sh
+$ git clone https://github.com/yonaskolb/EmojiKit.git
+$ cd EmojiKit
+$ make install
+$ make build
+```
+
+### Swift Package Manager
+
+**Use as dependency**
 
 Add the following dependency to your Package.swift manifest:
 
 ```swift
 .package(url: "https://github.com/YutoMizutani/EmojiKit.git", .branch("master")),
 ```
+
+And then import wherever needed: `import EmojiKit`
 
 ## Example
 
@@ -33,12 +46,8 @@ EmojiKit().generate(
 )
 ```
 
-## How to build
-
-```
-$ make install
-$ make build
-```
+More usages
+- Slack Emoji generator: https://github.com/YutoMizutani/SlackPet#slack-emoji-%E4%BD%9C%E6%88%90
 
 ## Parameters
 
